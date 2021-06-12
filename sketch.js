@@ -67,7 +67,7 @@ function draw() {
       dieSound.play();
       gameState = END;
     }
-    if(score%100 ==0 ){
+    if(score%100 ==0 && score >0){
       checkSound.play();
     }
       
@@ -79,6 +79,7 @@ function draw() {
     cloudGroup.setVelocityXEach(0);
     ground.velocityX = 0;
     trex.velocityX = 0;
+    trex.velocityY = 0;
     trex.changeAnimation("collided", trexCollidedImage);
     restart.visible = true;
     gameOver.visible = true;
